@@ -1,0 +1,90 @@
+<app-header></app-header>
+<ion-content color="dark">
+  <ion-modal class="exchange_Seat" [isOpen]="isModalOpen">
+    <ng-template>
+      <ion-content color="dark">
+        <div class="card">
+          <ion-datetime locale="en-GB-u-hc-h12"></ion-datetime>
+        </div>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+  <section>
+    <h2 class="ion-text-center">Add your details</h2>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div class="input-container">
+            <ion-label>Full Name</ion-label>
+            <ion-input placeholder="Name"> </ion-input>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <div class="input-container">
+            <ion-label>Date of Birth</ion-label>
+            <div>
+              <ion-input placeholder="DD-MM-YYYY"> </ion-input>
+              <ion-icon
+                (click)="toggleOpen()"
+                name="calendar-number-outline"
+              ></ion-icon>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <div class="input-container">
+            <ion-label>Addhar No.</ion-label>
+            <ion-input placeholder="XXXX-XXXX-XXXX"> </ion-input>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-list>
+            <ion-item class="dropdown-container">
+              <ion-label>Profession</ion-label>
+              <ion-select placeholder="Select One">
+                <ion-select-option value="t">Teacher</ion-select-option>
+                <ion-select-option value="s">Student</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <div class="input-container">
+            <ion-label>Age</ion-label>
+            <ion-input placeholder="Age" type="number"> </ion-input>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <div class="option-container">
+            <ion-label>Gender</ion-label>
+            <div>
+              <div class="radio active">
+                <ion-text>Male</ion-text>
+                <ion-radio slot="start" value="griff"></ion-radio>
+              </div>
+              <div class="radio">
+                <ion-text>Female</ion-text> <ion-radio slot="start"></ion-radio>
+              </div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="ion-text-center ion-padding">
+          <ion-button class="ion-padding"> Save </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </section>
+</ion-content>

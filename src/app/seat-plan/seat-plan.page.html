@@ -1,0 +1,46 @@
+<app-header pannel="others"></app-header>
+
+<ion-content color="dark">
+  <section>
+    <ion-grid>
+      <ion-row>
+        <ion-col class="ion-text-center">
+          <ion-text class="ion-text-center">Select Seat</ion-text>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="ion-text-center">
+          <div class="indicator">
+            <b>Booked</b>
+            <div class="booked"></div>
+            <b>Available</b>
+            <div></div>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col id="seats">
+          <!-- <ion-card
+            class="seat"
+            *ngFor="let seat of seats"
+            (click)="submit(seat)"
+            [ngClass]="{'booked': !seat.available}"
+            >{{seat.seatNo}}</ion-card -->
+          >
+          <!-- <ion-card class="entrance">Entrance/ Staircase</ion-card> -->
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="ion-text-center">
+          <ion-button
+            *ngIf="selected"
+            class="ion-margin"
+            expand="full"
+            (click)="next()"
+            >Next</ion-button
+          >
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </section>
+</ion-content>
